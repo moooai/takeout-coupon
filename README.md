@@ -34,6 +34,18 @@ python scripts/fetch_coupons.py -p meituan   # 仅美团
 python scripts/fetch_coupons.py --json       # 原始 JSON
 ```
 
+## 领取页面示例
+
+扫码或点击领取链接后看到的红包页面：
+
+**美团外卖红包**（天天领红包，叠加使用）：
+
+![美团外卖红包领取页](assets/meituan-sample1.png)
+
+**饿了么/淘宝闪购红包**（最高领 66 元，可叠加果蔬红包）：
+
+![饿了么/淘宝闪购红包领取页](assets/eleme-sample1.png)
+
 ## 重要说明
 
 - `coupon_code` 必须原样呈现给用户，禁止修改任何字符（口令含 %、¥、✔、！等平台特定符号）
