@@ -3,7 +3,7 @@ name: takeout-coupon
 display_name: Takeout Coupon 外卖优惠券隐藏券大额券，美团、京东、闪购/饿了么
 description: 调用外卖优惠券API，一键获取美团、饿了么/淘宝闪购、京东外卖红包与隐藏优惠券口令，附带聚合领券页面。返回优惠券代码和领取说明，用户复制口令到对应APP即可领券，天天领外卖红包。
 english_description: Call takeout coupon API to fetch hidden coupon lists, red packets and aggregated redemption pages for platforms (Meituan, Taobao Flash/Ele.me, JD.com). Returns coupon codes and redemption instructions for users to copy and redeem in corresponding apps.
-version: 2.0.1
+version: 2.0.2
 author: moooai
 permissions: 网络访问权限（调用外卖优惠券API）
 homepage: https://github.com/moooai/takeout-coupon
