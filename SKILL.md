@@ -1,12 +1,12 @@
 ---
 name: takeout-coupon
 display_name: Takeout Coupon 外卖优惠券隐藏券大额券，美团、京东、闪购/饿了么
-description: 调用外卖优惠券API获取各平台（美团、淘宝闪购/饿了么、京东）的隐藏外卖券列表及聚合领券页面。返回优惠券代码和领取说明，用户可复制优惠码到对应APP领取。
-english_description: Call takeout coupon API to fetch hidden coupon lists and aggregated redemption pages for platforms (Meituan, Taobao Flash/Ele.me, JD.com). Returns coupon codes and redemption instructions for users to copy and redeem in corresponding apps.
-version: 1.0.1
+description: 调用外卖优惠券API，一键获取美团、饿了么/淘宝闪购、京东外卖红包与隐藏优惠券口令，附带聚合领券页面。返回优惠券代码和领取说明，用户复制口令到对应APP即可领券，天天领外卖红包。
+english_description: Call takeout coupon API to fetch hidden coupon lists, red packets and aggregated redemption pages for platforms (Meituan, Taobao Flash/Ele.me, JD.com). Returns coupon codes and redemption instructions for users to copy and redeem in corresponding apps.
+version: 2.0.0
 author: moooai
 permissions: 网络访问权限（调用外卖优惠券API）
-homepage: https://github.com/moooai/skills
+homepage: https://github.com/moooai/takeout-coupon
 ---
 
 # 外卖优惠券
@@ -31,6 +31,7 @@ homepage: https://github.com/moooai/skills
 | API地址 | `https://agskills.moontai.top/coupon/takeout` |
 | 认证方式 | 无需认证 |
 | 请求方法 | GET |
+| 归因参数 | `ch=<渠道>&u=<安装uuid>`（fetch_coupons.py 自动附加，用于匿名安装统计与订单归因） |
 | 返回格式 | JSON |
 
 ### 响应数据结构
