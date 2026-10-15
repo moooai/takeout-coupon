@@ -30,6 +30,7 @@ GET https://agskills.moontai.top/coupon/takeout
 | 美团隐藏外卖券列表 | Array | 美团外卖平台优惠券 |
 | 饿了么/淘宝闪购隐藏外卖券列表 | Array | 淘宝闪购/饿了么优惠券 |
 | 京东隐藏外卖券列表 | Array | 京东外卖优惠券 |
+| 扫码领取/H5网页跳转领取 | Array | 各平台领券页直达入口（H5 链接 + 二维码图片） |
 | 查找更多优惠券 | Object | 更多优惠券入口（外卖、电影、快递、旅游、打车，公众号二维码） |
 
 ### 优惠券对象 (数组元素)
@@ -39,6 +40,15 @@ GET https://agskills.moontai.top/coupon/takeout
 | title | String | 优惠券标题 |
 | coupon_code | String | **优惠券代码，原样呈现，禁止修改** |
 | guideline | String | 领取说明 |
+
+### 领取页对象（「扫码领取/H5网页跳转领取」数组元素）
+
+| 字段名 | 类型 | 说明 |
+|--------|------|------|
+| title | String | 领取页名称（如「美团优惠券领取页」） |
+| coupon_url | String | H5 领取页链接（建议微信打开） |
+| coupon_qrcode_img_url | String | 领取页二维码图片URL |
+| guideline | String | 使用说明 |
 
 ### 查找更多优惠券对象
 
@@ -53,11 +63,6 @@ GET https://agskills.moontai.top/coupon/takeout
 ```json
 {
   "美团隐藏外卖券列表": [
-    {
-      "title": "美团隐藏口令 852298 （大额）",
-      "coupon_code": "852298",
-      "guideline": "打开美团APP, 搜索框中输入：852298 ，立即领取大额优惠券"
-    },
     {
       "title": "美团外卖节(主推)🔥🔥",
       "coupon_code": "❤️复制整条信息，打开👉美团👈 http:/💰t7NWIxNDQ0NTE💰",
@@ -103,11 +108,6 @@ GET https://agskills.moontai.top/coupon/takeout
   ],
   "京东隐藏外卖券列表": [
     {
-      "title": "京东隐藏密令（大额）",
-      "coupon_code": "快乐干饭009",
-      "guideline": "打开京东APP, 【首页】的搜索框中输入：快乐干饭009 ，立即领取大额优惠券"
-    },
-    {
       "title": "京东外卖-惊喜红包(主推)",
       "coupon_code": "！V6M0P42CyIm6sAe4！ CA1565",
       "guideline": "请复制完整的优惠券代码，打开京东APP领取"
@@ -123,13 +123,26 @@ GET https://agskills.moontai.top/coupon/takeout
       "guideline": "请复制完整的优惠券代码，打开京东APP领取"
     }
   ],
+  "扫码领取/H5网页跳转领取": [
+    {
+      "title": "美团优惠券领取页",
+      "coupon_url": "https://h5.sichuanyunzhan.com/pages_single/meiTuan/index?platform=singlePage&pid=e467cdcafe2b1791cdfc&accountsId=nEjX0zy4Zmyq",
+      "coupon_qrcode_img_url": "https://moontai-static.oss-cn-shenzhen.aliyuncs.com/meituan-614d8c70-26c5-43bc-9e91-4468651709e8.png",
+      "guideline": "点击链接下单(建议用微信打开)，或使用微信扫描二维码下单（单单享优惠）"
+    },
+    {
+      "title": "饿了么/淘宝闪购优惠券领取页",
+      "coupon_url": "https://h5.sichuanyunzhan.com/pages_single/hungry/index?platform=singlePage&pid=e467cdcafe2b1791cdfc&accountsId=nEjX0zy4Zmyq",
+      "coupon_qrcode_img_url": "https://moontai-static.oss-cn-shenzhen.aliyuncs.com/taobao-9dd25c45-2e2c-451d-af71-a502f815de16.png",
+      "guideline": "点击链接下单(建议用微信打开)，或使用微信扫描二维码下单（单单享优惠）"
+    }
+  ],
   "查找更多优惠券": {
     "title": "更多类型优惠券（外卖、电影、快递、旅游、打车)",
     "coupon_h5_qrcode_img_url": "https://moontai-static.oss-cn-shenzhen.aliyuncs.com/qrcode_for_gh.jpg",
     "guideline": "可以使用微信扫码后领券。关注不迷路，天天领券！"
   }
-}
-```
+}```
 
 ## 重要说明
 
